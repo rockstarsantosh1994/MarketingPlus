@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_customeadapter"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="@dimen/margin20"
+        android:layout_marginLeft="@dimen/margin15"
+        android:layout_marginRight="@dimen/margin15"
+        android:layout_marginTop="@dimen/margin10"
+        android:layout_marginBottom="@dimen/margin5"
+        android:elevation="@dimen/margin5">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_banner_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:maxLines="1"
+                android:textColor="@color/red900"
+                android:textSize="@dimen/textsize25" />
+
+            <ImageView
+                android:id="@+id/iv_banner_image"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin140"
+                android:scaleType="fitXY"
+                android:src="@drawable/logo"/>
+
+            <LinearLayout
+                android:id="@+id/ll_bottom_background"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/gradient"
+                android:orientation="vertical">
+
+             <!--   <TextView
+                    android:id="@+id/tv_article_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin10"
+                    android:layout_marginTop="@dimen/margin3"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="Article title"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textsize16"
+                    android:textStyle="bold" />-->
+
+                <TextView
+                    android:id="@+id/tv_article_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin10"
+                    android:layout_marginTop="@dimen/margin1"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text="Article title"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize14" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

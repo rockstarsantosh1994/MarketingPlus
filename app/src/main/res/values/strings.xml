@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">MarketingPlus</string>
+    <string name="email_address">Email address</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot password</string>
+    <string name="login">Login</string>
+    <string name="don_t_have_an_account">Don\'t have account?</string>
+    <string name="signup_here">Signup here</string>
+    <string name="home">Home</string>
+    <string name="consumer">Consumer</string>
+    <string name="contact_us">Contact Us</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
