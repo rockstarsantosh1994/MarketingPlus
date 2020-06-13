@@ -13,6 +13,7 @@ import com.google.gson.stream.JsonWriter;
 import com.soulsoft.marketingplus.AllKeys;
 import com.soulsoft.marketingplus.model.LoginResponse;
 import com.soulsoft.marketingplus.model.advertisment.AdvertismentResponse;
+import com.soulsoft.marketingplus.model.consumer.ConsumerResponse;
 
 import java.io.IOException;
 import java.util.Map;
@@ -71,6 +72,34 @@ public class ApiRequestHelper {
     public void advertisment( final OnRequestComplete onRequestComplete) {
         Call<AdvertismentResponse> call = marketingPlusServices.advertisement();
         advertisment_api(onRequestComplete, call);
+    }
+
+    public void getConsumerData( final OnRequestComplete onRequestComplete) {
+        Call<ConsumerResponse> call = marketingPlusServices.getConsumerData();
+        consumer_api(onRequestComplete, call);
+    }
+
+    private void consumer_api(final OnRequestComplete onRequestComplete, Call<ConsumerResponse> call) {
+        call.enqueue(new Callback<ConsumerResponse>() {
+            @Override
+            public void onResponse(Call<ConsumerResponse> call, Response<ConsumerResponse> response) {
+                if (response.isSuccessful()) {
+                    onRequestComplete.onSuccess(response.body());
+                } else {
+                    try {
+                        onRequestComplete.onFailure(Html.fromHtml(response.errorBody().string()) + "");
+                    } catch (IOException e) {
+                        onRequestComplete.onFailure("Unproper Response");
+                        e.printStackTrace();
+                    }
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ConsumerResponse> call, Throwable t) {
+                handle_fail_response(t, onRequestComplete);
+            }
+        });
     }
 
     private void advertisment_api(final OnRequestComplete onRequestComplete, Call<AdvertismentResponse> call) {

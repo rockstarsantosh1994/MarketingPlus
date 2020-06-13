@@ -25,6 +25,9 @@ public class ConsumerResponse {
     }
 
     public ArrayList<ConsumerBO> getData() {
+        if(this.Data==null){
+            this.Data=new ArrayList<>();
+        }
         return Data;
     }
 

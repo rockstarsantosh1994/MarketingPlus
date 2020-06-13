@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin10"
+        android:background="#fffde7"
+        android:elevation="@dimen/margin10"
+        android:visibility="visible"
+        app:cardCornerRadius="@dimen/margin5"
+        app:cardElevation="@dimen/margin10"
+        app:cardPreventCornerOverlap="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin5"
+            android:layout_marginTop="@dimen/margin5"
+            android:layout_marginRight="@dimen/margin15"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin5"
+                android:text="Santosh Pardeshi"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/textsize18"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin5"
+                android:drawableLeft="@drawable/ic_email"
+                android:drawablePadding="@dimen/margin10"
+                android:text="abc@gmail.com"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize16"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_mobile_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin5"
+                android:drawableLeft="@drawable/ic_phone"
+                android:drawablePadding="@dimen/margin10"
+                android:text="9527956414"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize16"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_birthdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin5"
+                android:drawableLeft="@drawable/ic_birthday"
+                android:drawablePadding="@dimen/margin10"
+                android:textSize="@dimen/textsize14" />
+
+            <TextView
+                android:id="@+id/tv_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin5"
+                android:drawableLeft="@drawable/ic_pin"
+                android:drawablePadding="@dimen/margin10"
+                android:text="rahuri , pune"
+                android:textSize="@dimen/textsize14" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/colorPrimary"/>
+
+            <LinearLayout
+                android:id="@+id/ll_buttons"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin40"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/ll_comment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_sms" />
+
+                    <TextView
+                        android:id="@+id/tv_comment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/margin5"
+                        android:text="@string/send_sms"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorPrimaryDark" />
+
+                <LinearLayout
+                    android:id="@+id/ll_like"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_whatsapp" />
+
+                    <TextView
+                        android:id="@+id/tv_like"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/margin5"
+                        android:text="@string/whatsapp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

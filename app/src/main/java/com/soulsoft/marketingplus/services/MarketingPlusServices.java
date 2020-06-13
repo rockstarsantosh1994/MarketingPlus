@@ -3,6 +3,7 @@ package com.soulsoft.marketingplus.services;
 
 import com.soulsoft.marketingplus.model.LoginResponse;
 import com.soulsoft.marketingplus.model.advertisment.AdvertismentResponse;
+import com.soulsoft.marketingplus.model.consumer.ConsumerResponse;
 
 import java.util.Map;
 
@@ -20,5 +21,8 @@ public interface MarketingPlusServices {
 
     @GET("getadds.php")
     Call<AdvertismentResponse> advertisement();
+
+    @GET("getusers.php")
+    Call<ConsumerResponse> getConsumerData();
 
 }
